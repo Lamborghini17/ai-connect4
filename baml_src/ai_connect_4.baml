@@ -44,3 +44,93 @@ test TestMakeMove {
     player "r"
   }
 }
+
+test VerticalWin {
+  functions [MakeMove]
+  args {
+    board [
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "r", "o", "o", "o"],
+      ["o", "o", "o", "r", "o", "o", "o"],
+      ["o", "o", "o", "r", "o", "o", "o"]
+    ]
+    player "r"
+  }
+}
+
+test HorizontalBlock {
+  functions [MakeMove]
+  args {
+    board [
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["y", "y", "y", "o", "o", "o", "o"]
+    ]
+    player "r"
+  }
+}
+
+test DiagonalWin {
+  functions [MakeMove]
+  args {
+    board [
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "r", "o", "o", "o", "o"],
+      ["o", "y", "r", "o", "o", "o", "o"],
+      ["y", "y", "y", "r", "o", "o", "o"]
+    ]
+    player "r"
+  }
+}
+
+test FullColumn {
+  functions [MakeMove]
+  args {
+    board [
+      ["o", "o", "o", "y", "o", "o", "o"],
+      ["o", "o", "o", "r", "o", "o", "o"],
+      ["o", "o", "o", "y", "o", "o", "o"],
+      ["o", "o", "o", "r", "o", "o", "o"],
+      ["o", "o", "o", "y", "o", "o", "o"],
+      ["o", "o", "o", "r", "o", "o", "o"]
+    ]
+    player "r"
+  }
+}
+
+test BlockVerticalWin {
+  functions [MakeMove]
+  args {
+    board [
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["y", "o", "o", "o", "o", "o", "o"],
+      ["y", "o", "o", "o", "o", "o", "o"],
+      ["y", "o", "o", "o", "o", "o", "o"]
+    ]
+    player "r"
+  }
+}
+
+test WinHorizontal {
+  functions [MakeMove]
+  args {
+    board [
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o"],
+      ["r", "r", "r", "o", "o", "o", "o"]
+    ]
+    player "r"
+  }
+}
